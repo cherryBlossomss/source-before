@@ -4,19 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.auch.dp</groupId>
-    <artifactId>design-patterns</artifactId>
-    <packaging>pom</packaging>
+    <groupId>com.auch.sb</groupId>
+    <artifactId>source-before</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>create</module>
-        <module>structured</module>
-        <module>behavior</module>
-    </modules>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+    </dependencies>
 
 </project>
