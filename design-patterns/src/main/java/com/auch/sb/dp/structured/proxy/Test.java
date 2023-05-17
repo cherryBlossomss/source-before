@@ -27,8 +27,11 @@ public class Test {
 //        Walkman walkman = (Walkman) Proxy.newProxyInstance(Walkman.class.getClassLoader(), new Class[]{Walkman.class}, new UserDynamicProxyHandlaer(new User("Alice")));
 //        walkman.listenMusic("FireBall");
         // 动态代理 - 不调用原方法
-        Walkman walkman001 = (Walkman) Proxy.newProxyInstance(Walkman.class.getClassLoader(), new Class[]{Walkman.class}, new WalkProxyHandler());
-        walkman001.listenMusic("Burn");
+//        Walkman walkman001 = (Walkman) Proxy.newProxyInstance(Walkman.class.getClassLoader(), new Class[]{Walkman.class}, new WalkProxyHandler());
+//        walkman001.listenMusic("Burn");
+
+        User user = (User) CglibProxyFactory.getProxy(User.class);
+        user.listenMusic("The House of Blue Light");
 
     }
 }
